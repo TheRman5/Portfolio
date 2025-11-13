@@ -12,13 +12,12 @@
     crossorigin="anonymous">
 
   <!-- preload hero image -->
-  <link rel="preload" href="./images/hero_setup.avif" as="image" type="image/avif">
-  <link rel="preload" href="./images/hero_setup.webp" as="image" type="image/webp">
-  <link rel="preload" href="./images/hero_setup.jpg" as="image" type="image/jpeg">
+  <link rel="preload" href="hero_setup.avif" as="image" type="image/avif">
+  <link rel="preload" href="hero_setup.webp" as="image" type="image/webp">
+  <link rel="preload" href="hero_setup.jpg" as="image" type="image/jpeg">
 
   <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
   <link rel="preconnect" href="https://cdn.jsdelivr.net">
-  <script type="module" src="main.js" defer></script>
   <style>
     @font-face {
       font-family: 'Montserrat-Regular';
@@ -609,7 +608,13 @@
     </template>
   </bay-component>
 
-<script defer src="https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015" integrity="sha512-ZpsOmlRQV6y907TI0dKBHq9Md29nnaEIPlkf84rnaERnq6zvWvPUqr2ft8M1aS28oN72PdrCzSjY4U6VaAw1EQ==" data-cf-beacon='{"version":"2024.11.0","token":"7a7a078f49fe498eb3befd1b61daf0e7","r":1,"server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
+<script type="module">
+  import bay from "https://cdn.jsdelivr.net/npm/@dunks1980/bay.js@3.4.2/bay.min.mjs";
+  import modal from "https://cdn.jsdelivr.net/npm/@dunks1980/bay.js@3.4.2/components/modal.mjs";
+
+  bay();
+  bay.create("bay-modal", modal, ["open"]);
+</script>
 </body>
 
 </html>
